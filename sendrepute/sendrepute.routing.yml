@@ -1,0 +1,9 @@
+sendrepute.settings:
+  path: '/admin/config/system/sendrepute'
+  defaults:
+    _form: '\Drupal\sendrepute\Form\SendReputeSettingsForm'
+    _title: 'SendRepute'
+  requirements:
+    _permission: 'administer sendrepute'
+  options:
+    _admin_route: true

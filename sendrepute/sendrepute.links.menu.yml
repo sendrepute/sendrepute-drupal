@@ -1,0 +1,5 @@
+sendrepute.settings:
+  title: 'SendRepute'
+  description: 'Configure paid mail classification routes.'
+  route_name: sendrepute.settings
+  parent: system.admin_config_system

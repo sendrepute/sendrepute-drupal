@@ -1,0 +1,30 @@
+sendrepute.settings:
+  type: config_object
+  label: 'SendRepute settings'
+  mapping:
+    paid_consent:
+      type: boolean
+      label: 'Paid classification consent'
+    sender_display_name:
+      type: string
+      label: 'Sender display name'
+    routes:
+      type: sequence
+      label: 'Explicit mail routes'
+      sequence:
+        type: mapping
+        mapping:
+          module:
+            type: string
+          key:
+            type: string
+          delegate:
+            type: string
+          mode:
+            type: string
+          failure_policy:
+            type: string
+          threshold:
+            type: float
+          allow_critical:
+            type: boolean

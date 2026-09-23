@@ -1,0 +1,4 @@
+administer sendrepute:
+  title: 'Administer SendRepute'
+  description: 'Configure paid mail classification and enforcement.'
+  restrict access: true

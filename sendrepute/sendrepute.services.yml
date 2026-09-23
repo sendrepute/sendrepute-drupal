@@ -1,0 +1,9 @@
+services:
+  logger.channel.sendrepute:
+    parent: logger.channel_base
+    arguments: ['sendrepute']
+  sendrepute.client:
+    class: Drupal\sendrepute\Service\SendReputeClient
+  sendrepute.policy:
+    class: Drupal\sendrepute\Service\MailPolicy
+    arguments: ['@config.factory', '@sendrepute.client', '@logger.channel.sendrepute']
