@@ -22,3 +22,18 @@ deliberately opts that exact route into critical enforcement.
 The fixed HTTPS endpoint refuses redirects and automatic retries and validates
 TLS. Do not patch it to use HTTP, a configurable destination, or disabled
 certificate checks. Do not include secrets or content in exception messages.
+
+The installed 11.4.7 harness authenticates a separate unprivileged Drupal
+account: both configuration GET and POST (even with a token copied from an
+administrator's form) return 403. Drupal Form API tokens are session-scoped,
+not single-use nonces; authorization is independently enforced by the route.
+Consent-off mail never contacts the classifier. Synthetic local 409 and 429
+responses each cause one transport attempt, with no automatic retry.
+
+This adapter is stateless and provides no cross-request nonce or concurrency
+deduplication: two independent mail sends can issue two classification calls.
+The customer API owns billing idempotency (account + canonical input
+fingerprint, replay or in-progress 409); the installed harness does **not**
+verify server-side billing or concurrent claims because it deliberately has
+no live API credentials or paid traffic. Do not treat adapter-side attempt
+counts as proof of billing exactly-once semantics.
