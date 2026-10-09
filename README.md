@@ -1,5 +1,11 @@
 # SendRepute for Drupal
 
+## Control panel preview
+
+![SendRepute inside Drupal administration](https://raw.githubusercontent.com/sendrepute/sendrepute-drupal/main/docs/screenshots/dashboard.webp)
+
+Captured from a local installation with sample data.
+
 SendRepute 0.1.0 is a standalone Drupal mail backend for **Drupal 10.3+ and
 Drupal 11.x** on PHP 8.1+. It supports exact, administrator-selected
 `module/key` mail routes. Classification is a variable-price paid operation and

@@ -1,0 +1,22 @@
+{
+  "integration": "drupal",
+  "files": [
+    "artifacts/spam-signal/public/integration-previews/drupal.webp",
+    "integrations/drupal/docs/screenshots/dashboard.webp"
+  ],
+  "sha256": "07e16a4b03791756d54547f185a43364a6e076ee85907756c60866ce76342516",
+  "capture": {
+    "method": "Real Chromium screenshot via playwright 1.62.1 (/repl/tools/bin/chromium), viewport 1440x1000 CSS px, first viewport only",
+    "viewport": "1440x1000 (CSS px)",
+    "date": "2026-10-09",
+    "state": "Signed-in native admin, SendRepute console Account tab, after clicking the shipped 'Load account' button (one free GET /v1/account read)"
+  },
+  "installed_vs_fixture": "actual-installed",
+  "host": "Drupal 11.4.7 (composer create-project drupal/recommended-project), standard profile, Claro admin theme, PHP 8.4.10, php -S .ht.router.php",
+  "integration_source": "integrations/drupal/sendrepute copied unchanged into web/modules/custom and enabled through module_installer",
+  "url_path": "/admin/config/system/sendrepute/console (Load account POST to the same route)",
+  "transport": "Shipped CurlTransport (libcurl) via https_proxy env and php -d curl.cainfo; SENDREPUTE_API_TOKEN set in the environment",
+  "bound": "127.0.0.1 only, temporary /tmp host, stopped after capture",
+  "demo_data_boundary": "Synthetic sample account only (id acct_sample_7f3c21, username sample-operator@example.invalid, credit USD 43.18250, 37 free classifications, 1284 successful classifications). HTTPS to www.sendrepute.com went through a loopback-only CONNECT proxy (127.0.0.1:39400) that ends TLS with a throwaway CA trusted only by this disposable PHP process and never connects upstream. No live API, paid calls, or mail. The disposable token 'sample-loopback-token' is held server-side and never shown in the UI. Isolated MariaDB 10.11.13 data dir in /tmp. No project or production database used. Host deleted after capture.",
+  "caption": "SendRepute service console Account panel inside Drupal, running in a disposable local install with a synthetic sample account. Not a live account."
+}
