@@ -7,3 +7,14 @@ sendrepute.settings:
     _permission: 'administer sendrepute'
   options:
     _admin_route: true
+sendrepute.console:
+  path: '/admin/config/system/sendrepute/console'
+  defaults:
+    _controller: '\Drupal\sendrepute\Controller\ConsoleController::page'
+    _title: 'SendRepute service console'
+  methods: [GET, POST]
+  requirements:
+    _permission: 'use sendrepute console'
+  options:
+    _admin_route: true
+    no_cache: true

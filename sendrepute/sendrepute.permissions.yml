@@ -2,3 +2,7 @@ administer sendrepute:
   title: 'Administer SendRepute'
   description: 'Configure paid mail classification and enforcement.'
   restrict access: true
+use sendrepute console:
+  title: 'Use the SendRepute service console'
+  description: 'Read account data and, with explicit per-operation consent, run paid SendRepute customer API operations from the wallet.'
+  restrict access: true

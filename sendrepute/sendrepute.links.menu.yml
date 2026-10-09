@@ -3,3 +3,8 @@ sendrepute.settings:
   description: 'Configure paid mail classification routes.'
   route_name: sendrepute.settings
   parent: system.admin_config_system
+sendrepute.console:
+  title: 'SendRepute service console'
+  description: 'Account, billing, AI services, builder and paid-result recovery.'
+  route_name: sendrepute.console
+  parent: system.admin_config_system

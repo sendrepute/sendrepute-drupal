@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_mail().
+ */
+function sendrepute_harness_mail($key, &$message, $params): void {
+  $message['subject'] = $params['subject'] ?? 'Installed harness';
+  $message['body'][] = $params['body'] ?? ('real MailManager body: ' . $key);
+}

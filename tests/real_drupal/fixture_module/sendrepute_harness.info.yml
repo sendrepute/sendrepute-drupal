@@ -1,0 +1,4 @@
+name: SendRepute installed harness
+type: module
+description: 'Local-only real MailManager lifecycle fixture.'
+core_version_requirement: '^10.3 || ^11'
